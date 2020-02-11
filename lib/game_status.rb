@@ -20,3 +20,7 @@ def won?(board)
     combo.all? { |idx| board[idx] == "X" } || combo.all? { |idx| board[idx] == "O"}
   end
 end
+
+def full?(board)
+  board.all? { |char| char == "X" || char == "O"}
+end
