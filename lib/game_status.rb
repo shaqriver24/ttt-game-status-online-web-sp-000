@@ -14,3 +14,9 @@ WIN_COMBINATIONS = [
   [0, 4, 8],
   [2, 4, 6]
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.select do |combo|
+    combo.all? { |char| char == "X" } || combo.all? { |char| char == "O"}
+  end
+end
